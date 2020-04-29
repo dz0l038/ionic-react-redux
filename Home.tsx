@@ -1,7 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonButton } from '@ionic/react';
 import React, { useState } from 'react';
-import './Home.css';
-import HomeComp from '../../components/HomeComp/HomeComp';
 import {
   useDispatch,
 } from 'react-redux'
@@ -11,7 +9,6 @@ import { Color } from '../../redux/colors/types';
 
 const Home: React.FC = () => {
   const colors = useTypedSelector(state => state.colors);
-  const [localColors, setLocalColors] = useState<Color[]>([...colors]);
   const [text, setText] = useState<string>();
   const dispatch = useDispatch();
 
